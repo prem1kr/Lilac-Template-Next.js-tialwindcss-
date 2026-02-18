@@ -35,8 +35,8 @@ export default function Navbar() {
       {/* mobile full screen after humburger clicked */}
       <div className={`fixed inset-0 bg-[#e7e3dc] flex flex-col items-center justify-center transition-transform duration-500 ease-in-out ${open ? "translate-y-0" : "-translate-y-full"}`}  >
         <div className="flex flex-col items-center gap-10 text-4xl font-heading text-[#1f2d1c]">
-          <a href="#" onClick={() => setOpen(false)} className="hover:opacity-70 transition"  > Blog </a>
-          <a href="#" onClick={() => setOpen(false)} className="hover:opacity-70 transition" >  Contact </a>
+          <a href="#" onClick={() => setOpen(false)} className="hover:opacity-70 transition"  >Blog </a>
+          <a href="#" onClick={() => setOpen(false)} className="hover:opacity-70 transition" >Contact </a>
         </div>
       </div>
     </>
