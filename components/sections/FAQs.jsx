@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Container from "../ui/Container.jsx";
+import ScrollAnimation from "../animations/Framer-motion.jsx";
 
 const faqs = [
     {
@@ -17,7 +18,7 @@ const faqs = [
         question: "What are your rates?",
         answer: "My standard rate is $250–$350 per 50-minute session for psychologists in Santa Monica, with superbills provided for insurance reimbursement.",
     },
-  
+
 ];
 
 export default function FAQs() {
@@ -51,10 +52,13 @@ export default function FAQs() {
                                     <div key={index} className="py-5 sm:py-6">
                                         <button onClick={() => toggleFAQ(index)} className="w-full flex items-start gap-4 text-left"  >
                                             <span className="text-2xl leading-none mt-1 cursor-pointer "> {isOpen ? "—" : "+"} </span>
-                                            <h3 className="text-lg sm:text-xl font-medium cursor-pointer"> {item.question} </h3>
+                                            <ScrollAnimation delay={1}>
+                                                <h3 className="text-lg sm:text-xl font-medium cursor-pointer"> {item.question} </h3>
+                                            </ScrollAnimation>
                                         </button>
-
-                                        {isOpen && (<p className="pl-8 mt-3 text-sm sm:text-base max-w-xl"> {item.answer} </p>)}
+                                        <ScrollAnimation delay={2} >
+                                            {isOpen && (<p className="pl-8 mt-3 text-sm sm:text-base max-w-xl"> {item.answer} </p>)}
+                                        </ScrollAnimation>
                                     </div>
                                 );
                             })}

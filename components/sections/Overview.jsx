@@ -1,5 +1,6 @@
 import Container from "../ui/Container.jsx";
 import Button from "../ui/Button.jsx";
+import ScrollAnimation from "../animations/Framer-motion.jsx";
 
 export default function Overview() {
     return (
@@ -9,15 +10,15 @@ export default function Overview() {
 
                     {/* Heading */}
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-6"> Get started today. </h2>
+                    <ScrollAnimation delay={1}>
+                        {/* Text */}
+                        <p className="max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed mb-10">
+                            Ready to ease anxiety, heal from trauma, or overcome burnout in a supportive Santa Monica space?
+                            Contact me to book your first in-person or telehealth session—I'm here to guide high-achievers like you toward resilience and balance.
+                            Let's start this journey to a calmer, more connected you.
+                        </p>
 
-                    {/* Text */}
-                    <p className="max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed mb-10">
-                        Ready to ease anxiety, heal from trauma, or overcome burnout in a supportive Santa Monica space?
-                        Contact me to book your first in-person or telehealth session—I'm here to guide high-achievers like you toward resilience and balance.
-                        Let's start this journey to a calmer, more connected you.
-                    </p>
-
-
+                    </ScrollAnimation>
                     {/* Button */}
                     <Button className="border border-white text-white px-8 py-4 text-sm sm:text-base">
                         GET IN TOUCH →

@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Playfair_Display, Inter } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
+import Navbar from "@/components/layout/Navbar.jsx";
+import { ReactNode } from "react";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -12,12 +13,10 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${playfair.variable} ${inter.variable} bg-background font-body text-primary`}
-      >
+      <body className={`${playfair.variable} ${inter.variable} bg-background font-body text-primary`}  >
         <Navbar />
         {children}
       </body>

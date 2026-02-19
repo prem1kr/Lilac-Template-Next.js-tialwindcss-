@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "../ui/Container.jsx";
 import Button from "../ui/Button.jsx";
+import ScrollAnimation from "../animations/Framer-motion.jsx";
 
 export default function CTA() {
     return (
@@ -18,17 +19,17 @@ export default function CTA() {
                         <div className="w-full px-6 sm:px-10 md:px-16 lg:px-20 py-12 lg:py-0 text-[#162315]">
 
                             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight mb-6">  Reconnect in a Healing Space </h1>
+                            <ScrollAnimation delay={1} >
+                                <p className="mb-6 text-lg">  If you are facing any of these, there’s hope: </p>
 
-                            <p className="mb-6 text-lg">  If you are facing any of these, there’s hope: </p>
-
-                            <ul className="space-y-4 mb-10 text-base list-disc list-inside">
-                                <li>Feeling functional on the outside yet exhausted inside</li>
-                                <li>Stuck exploring lingering past experiences</li>
-                                <li>Grappling with perfectionism and high internal pressure</li>
-                                <li>Navigating emotional edges and constant tension</li>
-                                <li>Struggling to thrive amid fast-paced life demands</li>
-                            </ul>
-
+                                <ul className="space-y-4 mb-10 text-base list-disc list-inside">
+                                    <li>Feeling functional on the outside yet exhausted inside</li>
+                                    <li>Stuck exploring lingering past experiences</li>
+                                    <li>Grappling with perfectionism and high internal pressure</li>
+                                    <li>Navigating emotional edges and constant tension</li>
+                                    <li>Struggling to thrive amid fast-paced life demands</li>
+                                </ul>
+                            </ScrollAnimation>
                             <div className="border-t border-[#b8b3c7] pt-8">
                                 <div className="flex justify-center lg:justify-start">
                                     <Button>   GET IN TOUCH →  </Button>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "../ui/Container.jsx";
+import ScrollAnimation from "../animations/Framer-motion.jsx";
 
 const services = [
     {
@@ -38,15 +39,21 @@ export default function Services() {
                             className="border border-primary/40 p-8 flex flex-col justify-between" >
 
                             <div className="space-y-6">
-                                <h3 className="text-2xl font-heading font-medium">{service.title} </h3>
-                                <p className="text-base leading-relaxed">{service.description} </p>
+                                <ScrollAnimation delay={1}>
+                                    <h3 className="text-2xl font-heading font-medium">{service.title} </h3>
+                                </ScrollAnimation>
+                                <ScrollAnimation delay={2}>
+                                    <p className="text-base leading-relaxed">{service.description} </p>
+                                </ScrollAnimation>
                             </div>
 
                             {/* Circular Image */}
                             <div className="mt-10 flex justify-center">
-                                <div className="relative w-64 h-64 rounded-full overflow-hidden">
-                                    <Image src={service.image} alt={service.title} fill className="object-cover" />
-                                </div>
+                                <ScrollAnimation delay={3}>
+                                    <div className="relative w-64 h-64 rounded-full overflow-hidden">
+                                        <Image src={service.image} alt={service.title} fill className="object-cover" />
+                                    </div>
+                                </ScrollAnimation>
                             </div>
                         </div>
                     ))}

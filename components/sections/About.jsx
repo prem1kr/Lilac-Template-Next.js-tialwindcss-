@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Container from "../ui/Container";
 import Button from "../ui/Button";
+import ScrollAnimation from "../animations/Framer-motion";
 
 export default function About() {
     return (
@@ -23,13 +24,13 @@ export default function About() {
                     {/* left side */}
                     <div className="order-2 lg:order-1 text-[#243b1b] text-center lg:text-left justify-self-center max-w-xl content-center">
                         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-6 justify-self-center"> Hi, I’m Dr. Maya Reynolds, PsyD </h1>
-
-                        <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-10 justify-self-center">
-                            I’m a licensed psychologist in Santa Monica, CA, offering a safe space for high-achievers tackling anxiety, trauma, burnout, and overthinking.
-                            With empathy and tools like CBT, EMDR, and mindfulness, we collaboratively build regulation, resilience, and sustainable thriving—in-person or telehealth.
-                            If you’re functional yet exhausted in a fast-paced world, let’s navigate challenges toward deeper insight and reconnection.
-                        </p>
-
+                        <ScrollAnimation delay={1} >
+                            <p className="text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-10 justify-self-center">
+                                I’m a licensed psychologist in Santa Monica, CA, offering a safe space for high-achievers tackling anxiety, trauma, burnout, and overthinking.
+                                With empathy and tools like CBT, EMDR, and mindfulness, we collaboratively build regulation, resilience, and sustainable thriving—in-person or telehealth.
+                                If you’re functional yet exhausted in a fast-paced world, let’s navigate challenges toward deeper insight and reconnection.
+                            </p>
+                        </ScrollAnimation>
                         <div className="flex justify-center lg:justify-start justify-self-center">
                             <Button> LET’S CHAT → </Button>
                         </div>

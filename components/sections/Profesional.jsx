@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Container from "../ui/Container.jsx";
+import ScrollAnimation from "../animations/Framer-motion.jsx";
 
 const sections = [
     {
@@ -43,10 +44,11 @@ export default function ProfessionalBackground() {
                                         <h3 className="text-xl sm:text-2xl font-medium cursor-pointer"> {item.title} </h3>
                                         <span className="text-2xl cursor-pointer"> {isOpen ? "—" : "+"} </span>
                                     </button>
-
-                                    {isOpen && (
-                                        <p className="mt-6 max-w-full text-sm sm:text-base leading-relaxed px-20 font-semibold "> {item.content} </p>
-                                    )}
+                                    <ScrollAnimation delay={1.5}>
+                                        {isOpen && (
+                                            <p className="mt-6 max-w-full text-sm sm:text-base leading-relaxed px-20 font-semibold "> {item.content} </p>
+                                        )}
+                                    </ScrollAnimation>
                                 </div>
                             );
                         })}
